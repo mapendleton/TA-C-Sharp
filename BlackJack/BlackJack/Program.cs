@@ -11,6 +11,10 @@ namespace BlackJack
         static void Main(string[] args)
         {
 
+            Deck deck = new Deck();
+
+            //Console.WriteLine(cardOne.Face + " of " + cardOne.Suit);
+            Console.ReadLine();
         }
     }
 }
