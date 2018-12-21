@@ -13,6 +13,11 @@ namespace BlackJack
 
             Deck deck = new Deck();
 
+            foreach (Card card in deck.Cards)
+            {
+                Console.WriteLine(card.Face + " of " + card.Suit);
+            }
+            Console.WriteLine(deck.Cards.Count);
             //Console.WriteLine(cardOne.Face + " of " + cardOne.Suit);
             Console.ReadLine();
         }
