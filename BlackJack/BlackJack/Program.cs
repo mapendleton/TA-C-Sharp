@@ -12,7 +12,9 @@ namespace BlackJack
         {
 
             Deck deck = new Deck();
-            deck = Shuffle(deck);
+            int timesShuffled = 0;
+            deck = Shuffle(deck,out timesShuffled);
+
 
             foreach (Card card in deck.Cards)
             {
@@ -23,19 +25,34 @@ namespace BlackJack
             Console.ReadLine();
         }
 
-        public static Deck Shuffle(Deck deck)
+        public static Deck Shuffle(Deck deck,out int timesShuffled, int times = 1)
         {
-            List<Card> tempList = new List<Card>();
-            Random random = new Random();
-
-            while (deck.Cards.Count > 0)
+            timesShuffled = 0;
+            for (int i = 0; i < times; i++)
             {
-                int randomIndex = random.Next(0, deck.Cards.Count);
-                tempList.Add(deck.Cards[randomIndex]);
-                deck.Cards.RemoveAt(randomIndex);
+                timesShuffled++;
+                List<Card> tempList = new List<Card>();
+                Random random = new Random();
+
+                while (deck.Cards.Count > 0)
+                {
+                    int randomIndex = random.Next(0, deck.Cards.Count);
+                    tempList.Add(deck.Cards[randomIndex]);
+                    deck.Cards.RemoveAt(randomIndex);
+                }
+                deck.Cards = tempList;
             }
-            deck.Cards = tempList;
+
             return deck;
         }
+
+        //public static Deck Shuffle(Deck deck,int times)
+        //{
+        //    for (int i = 0; i < times; i++)
+        //    {
+        //        deck = Shuffle(deck);
+        //    }
+        //    return deck;
+        //}
     }
 }
