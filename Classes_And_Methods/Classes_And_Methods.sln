@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optional_Parameters", "Opti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "output_parameter", "output_parameter\output_parameter.csproj", "{DBFC688C-9387-4B09-9534-9E3702536399}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "Inheritance\Inheritance.csproj", "{3F58C3AF-2B80-4E46-93BD-262B31E819F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{DBFC688C-9387-4B09-9534-9E3702536399}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBFC688C-9387-4B09-9534-9E3702536399}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBFC688C-9387-4B09-9534-9E3702536399}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F58C3AF-2B80-4E46-93BD-262B31E819F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F58C3AF-2B80-4E46-93BD-262B31E819F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F58C3AF-2B80-4E46-93BD-262B31E819F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F58C3AF-2B80-4E46-93BD-262B31E819F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
