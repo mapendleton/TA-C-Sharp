@@ -8,9 +8,15 @@ namespace BlackJack
 {
     public class BlackJackGame : Game
     {
-        public void Play()
+        public override void Play()
         {
 
+        }
+
+        public override void ListPlayer()
+        {
+            Console.WriteLine("BlackJack Players: ");
+            base.ListPlayer();
         }
     }
 }
