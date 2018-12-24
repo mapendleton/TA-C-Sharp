@@ -10,10 +10,29 @@ namespace Inheritance
     {
         static void Main(string[] args)
         {
-            Employee employee1 = new Employee() { FirstName = "Sample", LastName = "Student", Id = 1001};
-            Employee employee2 = new Employee() { FirstName = "Ray", LastName = "Cool", Id = 1003 };
+            //Employee employee1 = new Employee() { FirstName = "Sample", LastName = "Student", Id = 1001};
+            //Employee employee2 = new Employee() { FirstName = "Ray", LastName = "Cool", Id = 1003 };
 
-            Console.WriteLine(employee1 == employee2);
+
+            //p.131 53% C# course generics exercise
+            Employee<string> employee = new Employee<string>();
+            employee.Things = new List<string>() { "Book", "computer", "stuff", "things" };
+
+            Employee<int> employee1 = new Employee<int>();
+            employee1.Things = new List<int>() { 1, 2, 3, 4, 5 };
+
+           
+            Console.WriteLine("This employees things: ");
+            foreach (string thing in employee.Things)
+            {
+                Console.WriteLine(thing);
+            }
+            Console.WriteLine("This employees things: ");
+            foreach (int thing in employee1.Things)
+            {
+                Console.WriteLine(thing);
+            }
+
 
             Console.Read();
 
@@ -24,5 +43,6 @@ namespace Inheritance
             //employee2.Quit();
             //Console.Read();
         }
+    
     }
 }
