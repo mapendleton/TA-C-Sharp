@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace BlackJack
 {
@@ -15,7 +16,12 @@ namespace BlackJack
         public void Deal(List<Card> Hand)
         {
             Hand.Add(Deck.Cards.First());
-            Console.WriteLine(Deck.Cards.First().ToString() + "\n");
+            string card = string.Format(Deck.Cards.First().ToString() + "\n");
+            Console.WriteLine(card);
+            using (StreamWriter file = new StreamWriter(@"C:\Users\Matthew Pendleton\myProjects\TA-C-Sharp\BlackJack\BlackJack\Logs\logs.txt",true))
+            {
+                file.WriteLine(card);
+            }
 
             Deck.Cards.RemoveAt(0);
         }
