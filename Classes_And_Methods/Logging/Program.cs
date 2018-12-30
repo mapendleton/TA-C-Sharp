@@ -15,6 +15,7 @@ namespace Logging
             string input = Console.ReadLine();
             using (StreamWriter file = new StreamWriter(@"C:/users/Matthew Pendleton/documents/Tech Academy Files/ExerciseLogs/log.txt",true))
             {
+                file.WriteLine(DateTime.Now);
                 file.WriteLine(input);
             }
 
