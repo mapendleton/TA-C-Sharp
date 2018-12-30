@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4D528180-D0EB-40AB-9C47-1D88EA6821E6}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>BlackJack</RootNamespace>
-    <AssemblyName>BlackJack</AssemblyName>
+    <ProjectGuid>{627B1861-A279-44E5-8114-F10499BF8922}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Casino</RootNamespace>
+    <AssemblyName>Casino</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,20 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="BlackJackDealer.cs" />
+    <Compile Include="BlackJackGame.cs" />
+    <Compile Include="BlackJackRules.cs" />
+    <Compile Include="Card.cs" />
+    <Compile Include="Dealer.cs" />
+    <Compile Include="Deck.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="IWalkAway.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Logs\logs.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Casino\Casino.csproj">
-      <Project>{627b1861-a279-44e5-8114-f10499bf8922}</Project>
-      <Name>Casino</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
