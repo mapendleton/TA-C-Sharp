@@ -20,6 +20,7 @@ namespace Casino
             Console.WriteLine(card);
             using (StreamWriter file = new StreamWriter(@"C:\Users\Matthew Pendleton\myProjects\TA-C-Sharp\BlackJack\BlackJack\Logs\logs.txt",true))
             {
+                file.WriteLine(DateTime.Now);
                 file.WriteLine(card);
             }
 
