@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;s
+using System.Web;
 
 namespace NewsLetterAppMVC.Models
 {
