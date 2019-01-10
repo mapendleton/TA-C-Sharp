@@ -12,10 +12,6 @@ namespace NewsLetterAppMVC.Controllers
 {
     public class HomeController : Controller
     {
-        //private readonly string _connectionString = @"Data Source=(localdb)\ProjectsV13;Initial Catalog=Newsletter;
-        //                                    Integrated Security=True;Connect Timeout=30;Encrypt=False;
-        //                                    TrustServerCertificate=False;ApplicationIntent=ReadWrite;
-        //                                    MultiSubnetFailover=False";
 
         public ActionResult Index()
         {
@@ -43,25 +39,6 @@ namespace NewsLetterAppMVC.Controllers
                     db.SaveChanges();
                 }
                 return View("Success");
-                //string queryString = @"INSERT INTO SignUps (FirstName, LastName, EmailAddress) VALUES
-                //                        (@FirstName, @LastName, @EmailAddress)";
-
-                //using (SqlConnection connection = new SqlConnection(_connectionString))
-                //{
-                //    SqlCommand command = new SqlCommand(queryString, connection);
-                //    command.Parameters.Add("@FirstName", SqlDbType.VarChar);
-                //    command.Parameters.Add("@LastName", SqlDbType.VarChar);
-                //    command.Parameters.Add("@EmailAddress", SqlDbType.VarChar);
-
-                //    command.Parameters["@FirstName"].Value = firstName;
-                //    command.Parameters["@LastName"].Value = lastName;
-                //    command.Parameters["@EmailAddress"].Value = emailAddress;
-
-                //    connection.Open();
-                //    command.ExecuteNonQuery();
-                //    connection.Close();
-                //}
-                //return View("Success");
             }
         }
 
