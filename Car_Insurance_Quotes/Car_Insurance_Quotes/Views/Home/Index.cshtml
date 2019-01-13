@@ -1,0 +1,27 @@
+﻿<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Get your Car Insurance Quote now!</h5>
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("GetQuote", "Home", FormMethod.Post))
+            {
+                <div class="row no-gutters">
+                    <div class="form-group col-md-12">
+                        <input name="FirstName" type="text" class="form-control col" placeholder="First Name" />
+                    </div>
+                    <div class="form-group col-md-12">
+                        <input name="LastName" type="text" class="form-control col" placeholder="Last Name" />
+                    </div>
+                    <div class="form-group col-md-12">
+                        <input name="EmailAddress" type="email" class="form-control col" placeholder="Email Address" />
+                    </div>
+                    <div class="form-group col-md-12">
+                        <input name="DateOfBirth" type="date" class="form-control col" />
+                    </div>
+                    <button type="submit" class="btn btn-block btn-primary">Submit</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
