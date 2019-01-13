@@ -1,0 +1,30 @@
+﻿@using CodeFirst.ViewModels
+@model RecieptView
+
+<div class="card">
+    <div class="card-header text-center">
+        <h4>Your Reciept!</h4>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col">
+                @Model.FirstName
+            </div>
+            <div class="col">
+                @Model.LastName
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col">
+                Massage type: @Model.MassageType.ToString()
+            </div>
+            <div class="col">
+                Number of hours: @Model.Hours
+            </div>
+            <div class="col">
+                How many times you've visited us: @Model.NumberVisits
+            </div>
+        </div>
+    </div>
+</div>

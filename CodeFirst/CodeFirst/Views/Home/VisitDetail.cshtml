@@ -1,0 +1,28 @@
+﻿@using CodeFirst.Models
+@model Customer
+
+<div class="container">
+    @using (Html.BeginForm("VisitDetail", "Home", FormMethod.Post))
+    {
+    <form class="row">
+        <input type="hidden" name="id" value="@Model.Id" />
+        <div class="form-group">
+            <label for="massageType">Select your massage.</label>
+            <select class="form-control" name="massageType" id="massageType">
+                <option>leg</option>
+                <option>foot</option>
+                <option>back</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="length">How many hours?</label>
+            <select class="form-control" name="hours" id="hours">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-block btn-primary">Submit</button>
+    </form>
+    }
+</div>
